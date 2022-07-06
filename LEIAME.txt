@@ -1,0 +1,23 @@
+ COMPONENTES:
+ BOT�O TESTE
+	Chama a execu��o do m�todo "sample", que desenhar� uma curva logar�tmica (ver mais sobre o m�todo abaixo). Este bot�o serve apenas para teste. Pode (e DEVE) ser removido na vers�o final do seu trabalho.
+ CAIXAS ESCALAX E ESCALAY
+	A �rea de desenho tem cerca de 800 por 650 pixels. Assim, valores muito maiores ou muito menores do que estes n�meros podem ser dif�ceis de visualizar (ex, f(x)=x� e x=100).
+	Desta forma, voc� pode mudar a escala dos eixos X e Y dando valores nestas caixas de texto *antes* de adicionar os pontos ao gr�fico.
+ CLIQUE NA �REA DO GR�FICO
+	Mostrar�, a partir dos pontos inseridos anteriormente, qual o valor aproximado de x e f(x) no ponto clicado. Os valores s�o aproximados porque a tela s� aceita n�meros inteiros para desenho e tamb�m porque a escala (explica��o anterior) pode causar uma perda de precis�o nos valores.
+	O clique desenha um ponto azul no local indicado pela fun��o.
+ A base fornecida para o trabalho cont�m os seguintes m�todos que podem ser utilizados:
+ protected void clear()
+	Limpa os pontos armazenados e a �rea de desenho.
+ protected bool addPoint(float valX, float valY)
+	Adiciona um ponto em correspondente aos X e Y passados como par�metro. Estes pontos ser�o escalados(multiplicados) de acordo com os valores constantes nas TextBox para melhor visualiza��o do gr�fico - um efeito parecido com um zoom. 
+	Em princ�pio, a �rea do desenho vai de -395 a 395 para X e -331 a 331 para Y (valores aproximados)
+protected void sample()
+	Desenha uma curva da fun��o f(x) = log x (log na base 2) como exemplo. Recomenda-se uma escala por volta de 40 a 50 para X e Y para melhor visualiza��o, mas � interessante modificar os valores para entender como funciona.
+protected void draw()
+	Desenha o gr�fico com os pontos (x, y) inseridos por addPoint
+ public void removePoint(int posx, int posy)
+	Remove um (ou mais) ponto que tenham a coordenada (posx, posy) indicada. Redesenha o pol�gono em seguida.
+ private void draw()
+    Limpa a �rea de desenho e desenha um pol�gono com os pontos atuais.
